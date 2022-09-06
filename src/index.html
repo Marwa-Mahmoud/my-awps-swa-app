@@ -184,6 +184,7 @@
                             return info.url;
                         }).catch(alert)
                         .then(url => {
+                            console.log(url);
                             var websocket = this.websocket = new WebSocket(url);
                             websocket.onopen = e => {
                                 this.connected = true;
